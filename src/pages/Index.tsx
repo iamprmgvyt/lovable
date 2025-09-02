@@ -4,6 +4,7 @@ import { ToolCard } from "@/components/ToolCard";
 import { FaviconGenerator } from "@/components/FaviconGenerator";
 import { ColorPaletteGenerator } from "@/components/ColorPaletteGenerator";
 import { QRCodeGenerator } from "@/components/QRCodeGenerator";
+import { ImageOptimizer } from "@/components/ImageOptimizer";
 import { Image, Palette, QrCode, Zap, Download, FileImage } from "lucide-react";
 
 type ToolType = "favicon" | "colors" | "qr" | "optimizer" | "none";
@@ -47,13 +48,7 @@ const Index = () => {
       case "qr":
         return <QRCodeGenerator />;
       case "optimizer":
-        return (
-          <div className="max-w-2xl mx-auto text-center py-12">
-            <FileImage className="mx-auto h-16 w-16 text-muted-foreground mb-4" />
-            <h3 className="text-2xl font-bold mb-2">Image Optimizer</h3>
-            <p className="text-muted-foreground">Coming soon! Compress and optimize your images.</p>
-          </div>
-        );
+        return <ImageOptimizer />;
       default:
         return (
           <div className="max-w-4xl mx-auto">
